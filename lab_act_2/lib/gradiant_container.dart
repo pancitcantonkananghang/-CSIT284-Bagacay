@@ -5,18 +5,26 @@ import 'styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
+  
+  
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [const Color.fromARGB(255, 99, 108, 116), const Color.fromARGB(255, 27, 25, 24)],
         ),
       ),
-      child: const Center(
-        child: StyledText('Orgie Bagacay')
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset('assets/dice-images/dice-2.png'),
+            TextButton(onPressed: () {}, child: Text('Roll Dice')),
+          ],
+        ) 
       ),
     );
   }
