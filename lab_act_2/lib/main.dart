@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'gradient_container.dart';
+import 'gradiant_container.dart';
 
 void main() {
-  runApp(MaterialApp(home: Scaffold(body: GradientContainer())));
+  runApp(
+    const MaterialApp(
+      home: Scaffold(
+        body: GradientContainer(),
+      ),
+    ),
+  );
 }

@@ -8,7 +8,10 @@ class StyledText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: 40, color: Color.fromARGB(255, 78, 78, 74)),
+      style: const TextStyle(
+        fontSize: 40,
+        color: Color.fromARGB(255, 78, 78, 74),
+      ),
     );
   }
 }

@@ -6,16 +6,16 @@ import 'styled_text.dart';
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [const Color.fromARGB(255, 99, 108, 116), const Color.fromARGB(255, 27, 25, 24)],
         ),
       ),
-      child: Center(
+      child: const Center(
         child: StyledText('Orgie Bagacay')
       ),
     );
