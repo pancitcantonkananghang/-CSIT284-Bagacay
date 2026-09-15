@@ -18,9 +18,9 @@ const questions = [
     'What\'s the purpose of a StatefulWidget?',
     [
       'Update UI as data changes',
-      'Render UI that does not depend on data',
+      'Update data as UI changes',
       'Ignore data changes',
-      'Render static components only',
+      'Render UI that does not depend on data',
     ],
   ),
   QuizQuestion(
@@ -28,7 +28,7 @@ const questions = [
     [
       'StatelessWidget',
       'StatefulWidget',
-      'Both equally',
+      'Both are equally good',
       'None of the above',
     ],
   ),
@@ -37,16 +37,16 @@ const questions = [
     [
       'The UI is not updated',
       'The UI is updated',
+      'The nested StatefulWidget is updated',
       'The app crashes',
-      'The parent widget updates',
     ],
   ),
   QuizQuestion(
     'How should you update data inside of StatefulWidgets?',
     [
       'By calling setState()',
-      'By calling updateUI()',
       'By calling updateData()',
+      'By calling updateUI()',
       'By calling updateState()',
     ],
   ),
