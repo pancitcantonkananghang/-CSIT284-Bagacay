@@ -10,7 +10,7 @@ class StartScreen extends StatefulWidget {
 
 class _StartScreenState extends State<StartScreen> {
   final randomizer = Random();
-  
+
   final List<Color> colors = [
     Colors.white,
     Colors.yellow,
