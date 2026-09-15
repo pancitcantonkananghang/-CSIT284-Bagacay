@@ -2,7 +2,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatefulWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   State<StartScreen> createState() => _StartScreenState();
@@ -22,10 +24,11 @@ class _StartScreenState extends State<StartScreen> {
 
   int selectedColorIndex = 0;
 
-  void changeColor() {
+  void handleStart() {
     setState(() {
       selectedColorIndex = randomizer.nextInt(colors.length);
     });
+    widget.startQuiz();
   }
 
   @override
@@ -50,7 +53,7 @@ class _StartScreenState extends State<StartScreen> {
         ),
         const SizedBox(height: 30),
         OutlinedButton.icon(
-          onPressed: changeColor,
+          onPressed: handleStart,
           style: OutlinedButton.styleFrom(
             foregroundColor: currentColor,
             side: BorderSide(color: currentColor),
